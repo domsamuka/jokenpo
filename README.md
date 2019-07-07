@@ -37,6 +37,7 @@ Projeto 1 - SaaS do zero ao ＄ - Torneio Multiplayer de JoKenPô
     1. Etapa 8: Volta para a Etapa 1, aguardando o sorteio da nova chave só com os vencedores da etapa anterior.
 
 1. O vencedor do torneio será congratulado e fornecerá os dados adicionais para receber o prêmio.
+1. Na página do perfil, o usuário poderá fornecer seu endereço para recebimento dos prêmios. O endereço não aparecerá publicamente e só será visto pelo dono do Torneio APÓS o usuário vencer.
 1. O dono do torneio enviará o prêmio para o vencedor, podendo colocar o código de rastreio no próprio sistema.
 1. Ao término do torneio, o status muda para concluído e a página do torneio fica acessível com o histórico das jogadas OU pódio dos vencedores.
 1. O site jokenpo.dev listará todos os torneios públicos em aberto (ordenado por data de início).
