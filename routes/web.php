@@ -14,7 +14,7 @@
 // Vou deletar essa bagaça em breve 🙈
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 // Rotas automáticas de autenticação 
 Auth::routes();
@@ -22,20 +22,22 @@ Auth::routes();
 // Agrupar rotas para usuários autenticados
 Route::middleware(['auth'])->group(function () {
 
+    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
     // Teste Privado -> Remover
     Route::get('/privado', function () {
         return 'Esta página é PRIVADA';
     });
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::get('/publico', function () {
     return 'Esta página é PÚBLICA';
 });
 
-// Agrupar rotas para usuários autenticados
-Route::middleware(['auth'])->group(function () {
+// Agrupar rotas para Administradores
+Route::middleware(['isadmin'])->group(function () {
 
     Route::get('/admin', function () {
         return 'Só Administradores podem ver 🙈';
@@ -51,4 +53,4 @@ Route::get('/💣', function () {
         }
     }
     return $msg;
-});
+})->name('💥');
