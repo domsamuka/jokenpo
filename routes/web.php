@@ -11,10 +11,25 @@
 |
 */
 
+// Vou deletar essa bagaça em breve 🙈
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Rotas automáticas de autenticação 
 Auth::routes();
 
+// Agrupar rotas para usuários autenticados
+Route::middleware(['auth'])->group(function () {
+
+    // Teste Privado -> Remover
+    Route::get('/privado', function () {
+        return 'Esta página é PRIVADA';
+    });
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/publico', function () {
+    return 'Esta página é PÚBLICA';
+})->name('rotapublica');
