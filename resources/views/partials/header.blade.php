@@ -1,5 +1,5 @@
 <header>
-    <nav class="flex items-center justify-between flex-wrap bg-primary p-6">
+  <nav class="flex items-center justify-between flex-wrap bg-primary p-6">
   <div class="flex items-center flex-shrink-0 text-white mr-6">
     <a class="w-24 mr-6" href="/"><img src="{{ asset('img/logo.svg') }}" alt="{{ config('app.name') }}"></a>
     <span class="font-semibold text-xl tracking-tight">{{ config('app.name') }}</span>
