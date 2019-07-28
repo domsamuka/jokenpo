@@ -32,4 +32,23 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/publico', function () {
     return 'Esta página é PÚBLICA';
-})->name('rotapublica');
+});
+
+// Agrupar rotas para usuários autenticados
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/admin', function () {
+        return 'Só Administradores podem ver 🙈';
+    });
+});
+
+Route::get('/💣', function () {
+    $msg = 'Já tá chegando o Braga Boys com essa dança que é uma 💣';
+    if (auth()->user()) {
+        $msg .= ' <strong>estou logado</strong> ';
+        if (auth()->user()->isAdmin()) {
+            $msg .= ' <strong>e mando na bagaça toda</strong> ';
+        }
+    }
+    return $msg;
+});

@@ -29,6 +29,15 @@ class User extends Authenticatable
     ];
 
     /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'admin' => 0,
+    ];
+
+    /**
      * The attributes that should be cast to native types.
      *
      * @var array
@@ -36,4 +45,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Check whether user is admin or not.
+     *
+     * @return bool
+     */
+    public function isAdmin()
+    {
+        return $this->admin;
+    }
 }
