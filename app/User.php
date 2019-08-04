@@ -55,4 +55,11 @@ class User extends Authenticatable
     {
         return $this->admin;
     }
+    /**
+     * Get the tournaments for the user.
+     */
+    public function tournaments()
+    {
+        return $this->hasMany('App\Tournament');
+    }
 }
