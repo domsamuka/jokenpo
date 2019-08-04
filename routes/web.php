@@ -54,3 +54,6 @@ Route::get('/💣', function () {
     }
     return $msg;
 })->name('💥');
+
+// Rotas básicas do Torneio
+Route::resource('tournaments', 'TournamentController');
