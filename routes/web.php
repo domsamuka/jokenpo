@@ -38,10 +38,9 @@ Route::get('/publico', function () {
 
 // Agrupar rotas para Administradores
 Route::middleware(['isadmin'])->group(function () {
-
     Route::get('/admin', function () {
         return 'Só Administradores podem ver 🙈';
-    });
+    })->name('admin_dashboard');
 });
 
 Route::get('/💣', function () {
