@@ -4,6 +4,6 @@
 
 @section('content')
     <div class="title m-b-md">
-        JoKenPô
+        JoKenPô, Maluco!
     </div>
 @endsection
