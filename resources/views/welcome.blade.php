@@ -4,6 +4,6 @@
 
 @section('content')
     <div class="title m-b-md">
-        JoKenPô, <strong>Malucão</strong>!
+        JoKenPô, <strong>Bicho</strong>!
     </div>
 @endsection
