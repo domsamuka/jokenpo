@@ -41,3 +41,16 @@ Projeto 1 - SaaS do zero ao ＄ - Torneio Multiplayer de JoKenPô
 1. O dono do torneio enviará o prêmio para o vencedor, podendo colocar o código de rastreio no próprio sistema.
 1. Ao término do torneio, o status muda para concluído e a página do torneio fica acessível com o histórico das jogadas OU pódio dos vencedores.
 1. O site jokenpo.dev listará todos os torneios públicos em aberto (ordenado por data de início).
+
+
+
+
+## Instalação
+
+1. Clone o repositório.
+2. Rode o comando `composer install` para instalar as dependências.
+3. Crie um banco de dados vazio.
+4. Copie o arquivo `.env.example` como `.env` e edite as informações de acesso ao banco de dados (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`, etc).
+5. Rode o comando `php artisan key:generate` para gerar uma chave de aplicativo.
+6. Rode o comando `php artisan migrate` para criar as tabelas necessárias.
+7. Acesse o projeto no navegador.
