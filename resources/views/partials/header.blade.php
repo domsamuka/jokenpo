@@ -26,7 +26,7 @@
             <!-- Authentication Links -->
             @guest
                 <li class="">
-                    <a class="" href="{{ route('login') }}">{{ __('Logão') }}</a>
+                    <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="">
