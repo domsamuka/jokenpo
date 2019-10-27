@@ -56,3 +56,6 @@ Route::get('/💣', function () {
 
 // Rotas básicas do Torneio
 Route::resource('tournaments', 'TournamentController');
+
+// Rota do Deployment
+Route::post('deploy', 'DeployController@deploy');
