@@ -13,9 +13,11 @@
 
 // Vou deletar essa bagaça em breve 🙈
 Route::get('/', function () {
-    Debugbar::error('Meu erro foi esse!');
-    Debugbar::warning('Cuidado!');
-    Debugbar::addMessage('Só uma Mensagem', 'Rótulo');
+    if (env('APP_DEBUG')) {
+        Debugbar::error('Meu erro foi esse!');
+        Debugbar::warning('Cuidado!');
+        Debugbar::addMessage('Só uma Mensagem', 'Rótulo');
+    }
     return view('welcome');
 })->name('home');
 
